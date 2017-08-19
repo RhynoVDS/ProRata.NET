@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
-    <PackageId>ProRate.Net</PackageId>
+    <PackageId>ProRata.Net</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <Authors>Rhyno van der Sluijs</Authors>
     <Description>A lightweight library to quickly pro rate a number accross a collection.</Description>
