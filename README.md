@@ -2,13 +2,13 @@
 
 # ProRata.NET
 
-A lightweight library to quickly ProRate a number across a collection.
+A lightweight library to quickly Pro Rate a number across a collection.
 
-ProRata.NET introduces an extension method to IEnumberable<T> called ProRate which can be called on any class that implements this interface. Pro Rating can be simple or weighted
+ProRata.NET introduces an extension method to IEnumberable<T> called **ProRate** which can be called on any class that implements this interface. Pro Rating can be simple or weighted
 
 ## Simple Pro Rate
 
-The following is an example of a simple Pro Rate where a number is pro rated evenly across a collection of strings:
+The following is an example of a simple Pro Rata where the number 100 is pro rated evenly across a collection of strings:
 
 ```csharp
  List<string> test = new List<string>();
@@ -32,11 +32,13 @@ The following would give you the pro rate amount that was calculated for George
 var George_ProRataResult = resultObj.Result["George"];
 ```
 
+The Sum of all the results will always equal to the amount that is being prorated.
+
 ## Weighted Pro Rate
 
 Below is an example of a weighted Pro Rate where a number is pro rated based off a weight. 
 
-The weight is calculated as the length of each persons name:
+In this example, the weight is calculated as the length of each persons name:
 
 ```csharp
 List<string> test = new List<string>();
