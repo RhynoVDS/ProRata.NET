@@ -11,7 +11,7 @@ ProRata.NET introduces an extension method to IEnumberable<T> called **ProRate**
 The following is an example of a simple Pro Rata where the number 100 is pro rated evenly across a collection of strings:
 
 ```csharp
- List<string> test = new List<string>();
+List<string> test = new List<string>();
 test.Add("George");
 test.Add("Sue");
 test.Add("Sam");
