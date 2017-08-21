@@ -28,7 +28,7 @@ The dictionary has its keys equal to items in the collection.
 
 The following would give you the pro rate amount that was calculated for George
 
-```
+```csharp
 var George_ProRataResult = resultObj.Result["George"];
 ```
 
@@ -56,12 +56,13 @@ var resultObj = people.ProRate(100)
 
 ## Rounding
 
-It is possible to specify to what decimal place you want the function to round to. The following round each installment to 3 decimal places:
+It is possible to specify to what decimal place you want the function to round to. This is done using the **RoundTo** function.
+The following is an example where the function will round each installment to 3 decimal places:
 
-```
+```csharp
 var resultObj = people.ProRate(100)
                   .Weight(p=> p.length / sum_Name_Length)
-                  **.RoundTo(3)**
+                  .RoundTo(3)
                   .Calculate();
 ```
 
