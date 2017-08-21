@@ -11,19 +11,19 @@ ProRata.NET introduces an extension method to IEnumberable<T> called **ProRate**
 The following is an example of a simple Pro Rata where the number 100 is pro rated evenly across a collection of strings:
 
 ```csharp
-List<string> test = new List<string>();
-test.Add("George");
-test.Add("Sue");
-test.Add("Sam");
-test.Add("Simon");
+List<string> people = new List<string>();
+people.Add("George");
+people.Add("Sue");
+people.Add("Sam");
+people.Add("Simon");
 
-var resultObj = test.ProRate(100)
+var resultObj = people.ProRate(100)
                   .Calculate();
 ```
 
 ## Calculate Return Value
 
-Calculate will return an instance of **ProRateResult<T>** which contains a **Result** property that is a dictionary
+Calculate will return an instance of **ProRateResult<T>** which contains a **Result** property that is a dictionary.
 The dictionary has its keys equal to items in the collection. 
 
 The following would give you the pro rate amount that was calculated for George
@@ -41,15 +41,28 @@ Below is an example of a weighted Pro Rate where a number is pro rated based off
 In this example, the weight is calculated as the length of each persons name:
 
 ```csharp
-List<string> test = new List<string>();
-test.Add("George");
-test.Add("Sue");
-test.Add("Sam");
-test.Add("Simon");
+List<string> people = new List<string>();
+people.Add("George");
+people.Add("Sue");
+people.Add("Sam");
+people.Add("Simon");
 
-var sum_Name_Length = test.sum(r=> r.length);
+var sum_Name_Length = people.sum(r=> r.length);
 
-var resultObj = test.ProRate(100)
+var resultObj = people.ProRate(100)
                   .Weight(p=> p.length / sum_Name_Length)
                   .Calculate();
 ```
+
+## Rounding
+
+It is possible to specify to what decimal place you want the function to round to. The following round each installment to 3 decimal places:
+
+```
+var resultObj = people.ProRate(100)
+                  .Weight(p=> p.length / sum_Name_Length)
+                  **.RoundTo(3)**
+                  .Calculate();
+```
+
+
