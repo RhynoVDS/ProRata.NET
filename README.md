@@ -5,7 +5,7 @@ Download: https://www.nuget.org/packages/ProRata.Net/
 
 A lightweight library to quickly Pro Rate a number across a collection.
 
-ProRata.NET introduces an extension method to IEnumberable<T> called **ProRate** which can be called on any class that implements this interface. Pro Rating can be simple or weighted
+ProRata.NET introduces an extension method to IEnumberable<T> called **ProRate** which can be called on any class that implements this interface. This means that it can Pro Rate against a List containing any object type. Pro Rating can be simple or weighted.
 
 ## Simple Pro Rate
 
