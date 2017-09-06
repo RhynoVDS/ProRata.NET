@@ -1,4 +1,5 @@
 <img src="https://ci.appveyor.com/api/projects/status/6ykjs2ttkx8s80yf?svg=true" />
+Download: https://www.nuget.org/packages/ProRata.Net/
 
 # ProRata.NET
 
