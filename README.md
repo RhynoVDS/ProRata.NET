@@ -79,7 +79,7 @@ var resultObj = people.ProRate(100)
                       .Calculate();
 ```
 
-## Business Case example
+## Business Case Example
 
 The following is an exampe of how how this can be used:
 
