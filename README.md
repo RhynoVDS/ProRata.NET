@@ -87,12 +87,13 @@ Suppose we have a university which needs to work out the cost of each semester f
 Suppose we have a Course which costs $30,000. We have 4 Semesters in this course. The number of semesters changes per course.
 Suppose in our code we have a course object and a Semester object. The course object contains a list of semesters. Using this framework we can do this:
 
-```var result = Course.Semesters.ProRate(30000)
+```csharp
+var result = Course.Semesters.ProRate(30000)
                                 .Calculate();
 ```
 With 4 semesters we will have 7500 assigned to each semester.
 This is accessible as:
-```
+```csharp
 result.Result[Semester1_object]
 result.Result[Semester2_object]
 result.Result[Semester3_object]
@@ -101,9 +102,11 @@ result.Result[Semester4_object]
 
 Now suppose we have another requirement where the worth of each semester is based off the number of units in that semester. This would be a weighted pro rata where the number of units divided by the total units in the course would make the semester cost.
 
-```var result= Course.Semesters.ProRate(30000)
+```csharp
+var result= Course.Semesters.ProRate(30000)
                                .Weight(s=> s.Units.Count() / Course.total_units_count)
-                               .Calculate();```
+                               .Calculate();
+```
 
 
 
