@@ -62,9 +62,9 @@ The weight is the strings length divided by 17.
 
 This will allocated the following to each string:
 
-George = 35.29 (6/17 * 100)
-Sue = 17.65 (3/17 * 100)
-Sam = 17.65 (3/17 * 100)
+George = 35.29 (6/17 * 100)<br />
+Sue = 17.65 (3/17 * 100)<br />
+Sam = 17.65 (3/17 * 100)<br />
 Simon = 29.41 (5/17 * 100)
 
 ## Rounding
