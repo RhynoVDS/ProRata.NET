@@ -3,13 +3,13 @@ Download: https://www.nuget.org/packages/ProRata.Net/
 
 # ProRata.NET
 
-A lightweight library to quickly Pro Rate a number across a collection.
+A lightweight library to quickly Pro-Rate a number across a collection.
 
-ProRata.NET introduces an extension method to IEnumberable<T> called **ProRate** which can be called on any class that implements this interface. This means that it can Pro Rate against a List containing any object type. Pro Rating can be simple or weighted.
+ProRata.NET introduces an extension method to IEnumberable<T> called **ProRate** which can be called on any class that implements this interface. This means that it can Pro Rate against a List containing any object type. Pro-Rating can be simple or weighted.
 
-## Simple Pro Rate
+## Simple Pro-Rate
 
-The following is an example of a simple Pro Rata where the number 100 is pro rated evenly across a collection of strings:
+The following is an example of a simple Pro-Rata where the number 100 is pro rated evenly across a collection of strings:
 
 ```csharp
 List<string> people = new List<string>();
@@ -37,7 +37,7 @@ var George_ProRataResult = resultObj.Result["George"];
 
 The Sum of all the results will always equal to the amount that is being prorated.
 
-## Weighted Pro Rate
+## Weighted Pro-Rate
 
 Below is an example of a weighted Pro Rate where a number is pro rated based off a weight. 
 
@@ -100,7 +100,7 @@ decimal semester3_worth = result.Result[Semester3_object]
 decimal semester4_worth = result.Result[Semester4_object]
 ```
 
-Now suppose we have another requirement where the worth of each semester is based off the number of units in that semester. This would be a weighted pro rata where the number of units divided by the total units in the course would make the semester cost.
+Now suppose we have another requirement where the worth of each semester is based off the number of units in that semester. This would be a weighted pro-rata where the number of units divided by the total units in the course would make the semester cost.
 
 ```csharp
 var result= Course.Semesters.ProRate(30000)
