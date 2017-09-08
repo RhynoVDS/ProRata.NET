@@ -94,10 +94,10 @@ var result = Course.Semesters.ProRate(30000)
 With 4 semesters we will have 7500 assigned to each semester.
 This is accessible as:
 ```csharp
-result.Result[Semester1_object]
-result.Result[Semester2_object]
-result.Result[Semester3_object]
-result.Result[Semester4_object]
+decimal semester1_worth = result.Result[Semester1_object]
+decimal semester2_worth = result.Result[Semester2_object]
+decimal semester3_worth = result.Result[Semester3_object]
+decimal semester4_worth = result.Result[Semester4_object]
 ```
 
 Now suppose we have another requirement where the worth of each semester is based off the number of units in that semester. This would be a weighted pro rata where the number of units divided by the total units in the course would make the semester cost.
